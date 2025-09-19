@@ -83,11 +83,15 @@ a:hover { text-decoration: underline; }
 
 /* Job card */
 .job-card {
+  width: 300px;
   border: 1px solid rgba(15,23,42,0.06);
   padding: 12px;
   margin-bottom: 12px;
   border-radius: 8px;
   background: linear-gradient(180deg, #ffffff, #fbffff);
 }
-
+.job-card:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+  background: linear-gradient(180deg, #ffffff, #f0fdfa);
+}
 .muted { color: var(--muted); }
