@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createJob } from "../api/api";
 import { useAuth } from "../auth/AuthContext";
+import styles from "./styles/AddJob.module.css";
 
 export default function AddJob() {
   const { user } = useAuth();
@@ -41,7 +42,9 @@ export default function AddJob() {
 
   return (
     <div style={{ padding: 16 }}>
-      <h2>Add Job</h2>
+      <h2 style={{
+        color: "#256b47"
+      }}>Add Job</h2>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -52,18 +55,20 @@ export default function AddJob() {
         }}
       >
         <input
+          className={`input ${styles.inputBar}`}
           name="company"
           placeholder="Company"
           value={formData.company}
           onChange={handleChange}
         />
         <input
+        className={`input ${styles.inputBar}`}
           name="role"
           placeholder="Role"
           value={formData.role}
           onChange={handleChange}
         />
-        <select name="status" value={formData.status} onChange={handleChange}>
+        <select name="status" value={formData.status} onChange={handleChange} className={`input ${styles.inputBar}`}>
           <option>Applied</option>
           <option>Interviewed</option>
           <option>Rejected</option>
@@ -73,8 +78,9 @@ export default function AddJob() {
           placeholder="Details"
           value={formData.details}
           onChange={handleChange}
+          className={`input ${styles.inputField}`}
         />
-        <button type="submit">Add Job</button>
+        <button type="submit" className={styles.addButton}>Add Job</button>
       </form>
     </div>
   );
