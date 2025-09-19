@@ -7,26 +7,17 @@ export default function Header(){
     const {user, logout} = useAuth();
 
     return(
-        <header
-        style={{
-            padding: 12,
-            borderBottom: "1px solid #eee"
-        }}
-        >
-            <nav>
-                <Link to="/">Landing</Link>
+        <header>
+          <nav>
+            <Link to="/">Landing</Link>
             <Link to="/home">Home</Link>
             <Link to="/jobs/new">Add Job</Link>
 
-            <div
-            style={{
-                marginLeft: "auto"
-            }}
-            >
+            <div className="nav-spacer">
                 {user? (
                     <>
                         <span style={{marginRight: 8}}>Welcome {user.username}</span>
-                        <button onClick={logout}>Logout</button>
+                            <button className="btn secondary" onClick={logout}>Logout</button>
                     </>
                 ) : (
                     <>

@@ -33,27 +33,10 @@ export default function login() {
   return (
     <div style={{ padding: 20 }}>
       <h2>Login</h2>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 8,
-          maxWidth: 300,
-        }}
-      >
-        <input
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
+      <form onSubmit={handleSubmit} className="form">
+        <input className="input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input className="input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button className="btn" type="submit">Login</button>
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <p>

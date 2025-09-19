@@ -1,20 +1,39 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "username": "test",
-            "password": "test123"      
-        }
-    ],
-    "jobs": [
-        {
-            "id": 1,
-            "userId": 1,
-            "companyName": "mLab",
-            "role": "Software Developer",
-            "status": "Applied",
-            "dateApplied": "01-09-2025",
-            "details": "Build Ui, React, typescript"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "username": "test",
+      "password": "test123"
+    },
+    {
+      "id": "4f89",
+      "username": "chase",
+      "password": "chase123"
+    },
+    {
+      "id": "9550",
+      "username": "mxolisi",
+      "password": "mxolisi123"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "userId": 1,
+      "companyName": "mLab",
+      "role": "Software Developer",
+      "status": "Applied",
+      "dateApplied": "01-09-2025",
+      "details": "Build Ui, React, typescript"
+    },
+    {
+      "id": "60ec",
+      "company": "Google",
+      "role": "Developer",
+      "status": "Applied",
+      "details": "Anythig man",
+      "userId": "9550",
+      "dateApplied": "2025-09-19T11:26:39.136Z"
+    }
+  ]
 }

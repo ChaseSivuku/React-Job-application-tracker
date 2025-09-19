@@ -62,11 +62,13 @@ export default function Home() {
       {loading ? <p>Loading...</p> : null}
 
       {jobs.map((job) => (
-        <div key={job.id} style={{ border: "1px solid #ccc", padding: 8, marginBottom: 8 }}>
+        <div key={job.id} className="job-card">
           <h3>{job.company} — {job.role}</h3>
           <p>Status: <span style={{ color: job.status === "Rejected" ? "red" : job.status === "Applied" ? "orange" : "green" }}>{job.status}</span></p>
-          <button onClick={() => navigate(`/jobs/${job.id}`)}>View / Edit</button>
-          <button onClick={() => job.id !== undefined && onDelete(job.id)}>Delete</button>
+          <div className="center-row">
+            <button className="btn" onClick={() => navigate(`/jobs/${job.id}`)}>View / Edit</button>
+            <button className="btn secondary" onClick={() => job.id !== undefined && onDelete(job.id)}>Delete</button>
+          </div>
         </div>
       ))}
     </div>

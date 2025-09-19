@@ -1,14 +1,93 @@
 :root {
+  --olive-900: #0f3828;
+  --olive-700: #256b47;
+  --olive-500: #5aa878;
+  --grey-900: #111827;
+  --grey-700: #374151;
+  --grey-300: #e6eef0;
+  --white: #ffffff;
+  --muted: #6b7280;
+  --radius: 8px;
+  --gap: 1rem;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: var(--grey-900);
+  background-color: #f6f8f7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* App container for consistent alignment */
+.app-container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 24px;
+  background: linear-gradient(180deg, var(--white), #fbfdfc);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* Header / nav */
+header {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  margin-bottom: 12px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-spacer {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+a {
+  color: var(--olive-700);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover { text-decoration: underline; }
+
+/* Utilities */
+.center-row { display:flex; align-items:center; gap:var(--gap); }
+.space-between { display:flex; align-items:center; justify-content:space-between; }
+
+/* Buttons */
+.btn {
+  background: var(--olive-700);
+  color: var(--white);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--grey-900);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+/* Forms */
+.form { display:flex; flex-direction:column; gap:12px; max-width:420px; }
+.form .input, textarea { padding:8px 10px; border:1px solid rgba(15,23,42,0.06); border-radius:6px; }
+
+/* Job card */
+.job-card {
+  border: 1px solid rgba(15,23,42,0.06);
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff, #fbffff);
+}
+
+.muted { color: var(--muted); }
