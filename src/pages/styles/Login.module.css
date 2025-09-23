@@ -1,0 +1,13 @@
+.loginContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imageContainer img{
+    height: 100%;
+    width: 100%;
+}
+
+.imageContainer{
+    height: 450px;
+}

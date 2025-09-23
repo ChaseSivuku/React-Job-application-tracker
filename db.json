@@ -14,6 +14,11 @@
       "id": "9550",
       "username": "mxolisi",
       "password": "mxolisi123"
+    },
+    {
+      "id": "1a45",
+      "username": "mxolisi",
+      "password": "mxolisi123"
     }
   ],
   "jobs": [
@@ -24,16 +29,17 @@
       "role": "Software Developer",
       "status": "Applied",
       "dateApplied": "01-09-2025",
-      "details": "Build Ui, React, typescript"
+      "details": "Build Ui, React, typescript",
+      "company": "Google"
     },
     {
-      "id": "60ec",
-      "company": "Google",
+      "id": "48f1",
+      "company": "mLab",
       "role": "Developer",
-      "status": "Applied",
-      "details": "Anythig man",
-      "userId": "9550",
-      "dateApplied": "2025-09-19T11:26:39.136Z"
+      "status": "Interviewed",
+      "details": "Develop proper websites for proper people\n",
+      "userId": "4f89",
+      "dateApplied": "2025-09-22T06:52:03.833Z"
     }
   ]
 }

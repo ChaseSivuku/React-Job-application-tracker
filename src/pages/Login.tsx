@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { login as apiLogin } from "../api/api";
 import { useAuth } from "../auth/AuthContext";
+import styles from "./styles/Login.module.css";
 
 export default function login() {
   const [username, setUsername] = useState("");
@@ -31,17 +32,35 @@ export default function login() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <input className="input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input className="input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button className="btn" type="submit">Login</button>
-      </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <p>
-        Don't have an account? <Link to="/register">Register</Link>
-      </p>
+    <div style={{ padding: 20 }} className={styles.loginContainer}>
+      <div>
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit} className="form">
+          <input
+            className="input"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            className="input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="btn" type="submit">
+            Login
+          </button>
+        </form>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <p>
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
+      </div>
+      <div className={styles.imageContainer}>
+        <img src="/login-icon.png" alt="" />
+      </div>
     </div>
   );
 }

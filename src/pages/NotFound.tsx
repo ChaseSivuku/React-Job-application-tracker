@@ -8,7 +8,7 @@ export default function () {
         <h1>Oops!!!</h1>
         <p>Seems like you are lost.</p>
         <p>Sorry. the page you requested does not exist</p>
-        <Link to="/">Back To Landing</Link>
+        <Link to="/home">Go Back</Link>
       </main>
     </>
   );

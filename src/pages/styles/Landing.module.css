@@ -1,0 +1,13 @@
+.headingContainer{
+    display: flex;
+    align-items: center;
+}
+
+.headingContainer div img{
+    height: 100%;
+    width: 100%;
+}
+
+.headingContainer div{
+
+}
